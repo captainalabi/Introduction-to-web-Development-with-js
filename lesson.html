@@ -1,0 +1,56 @@
+<html>
+<head>
+<title>web dev</title>
+
+<script>//begining
+function personFunction(form){
+var name = form.yourname.value;
+var prof = form.yourprof.value;
+//alert("Your name is " + name + " and your profession is " + prof);
+document.getElementById("person").innerHTML = "Your name is " + name + " and your profession is " + prof;
+}
+
+function converterFunction(form){
+var naira = form.yourNaira.value;
+//alert("Your dollar value is " + "$" + naira/800);
+document.getElementById("naira").innerHTML = "Your dollar value is " + "$" + naira/800;
+}
+</script>
+</head>
+
+<body>
+
+<form>
+<fieldset>
+<legend>Introduce Yourself</legend>
+<p>
+<label>Your Name</label><input type="text" name="yourname" id="yourname" placeholder="Enter your name"/ >
+</p>
+<p>
+<label>Your Profession</label><input type="text" name="yourprof" id="yourprof" placeholder="Enter your profession"/ >
+</p>
+<p>
+<input type="button" name="button" value="submit" onClick="personFunction(this.form)"/ >
+</p>
+
+<div id="person"><div>
+</fieldset>
+</form>
+
+
+<form>
+<fieldset>
+<legend>Currency Converter</legend>
+<p>
+<label>Enter Your Naira value</label><input type="number" step="0.1" name="yourNaira" id="yourNaira" placeholder="Enter your naira value"/ >
+</p>
+
+<p>
+<input type="button" name="button" value="submit" onClick="converterFunction(this.form)"/ >
+</p>
+
+<div id="naira"><div>
+</fieldset>
+</form>
+</body>
+</html>
